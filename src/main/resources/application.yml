@@ -34,7 +34,7 @@ spring:
             - id: ruta-lista-deseos
               uri: lb://LISTA_DESEOS
               predicates:
-                - Path=/wishlist,/wishlit/**
+                - Path=/wishlist,/wishlist/**
 
             - id: ruta-carrito
               uri: lb://CARRITO
