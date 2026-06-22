@@ -11,10 +11,65 @@ spring:
         webflux:
           routes:
 
+            - id: ruta-auth
+              uri: lb://AUTENTICACION
+              predicates:
+                - Path=/auth,/auth/**
+            
             - id: ruta-catalogo
               uri: lb://CATALOGO
               predicates:
                 - Path=/catalogo,/catalogo/**
+
+            - id: ruta-editorial
+              uri: lb://CATALOGO
+              predicates:
+                - Path=/editorial,/editorial/**
+
+            - id: ruta-categoria
+              uri: lb://CATALOGO
+              predicates:
+                - Path=/categoria,/categoria/**
+
+            - id: ruta-lista-deseos
+              uri: lb://LISTA_DESEOS
+              predicates:
+                - Path=/wishlist,/wishlits/**
+
+            - id: ruta-carrito
+              uri: lb://CARRITO
+              predicates:
+                - Path=/carrito,/carrito/**
+
+            - id: ruta-pedidos
+              uri: lb://PEDIDOS
+              predicates:
+                - Path=/pedidos,/pedidos/**
+
+            - id: ruta-pagos
+              uri: lb://PAGOS
+              predicates:
+                - Path=/pagos,/pagos/**
+
+            - id: ruta-ventas
+              uri: lb://VENTAS
+              predicates:
+                - Path=/ventas,/ventas/**
+
+            - id: ruta-envio
+              uri: lb://ENVIO
+              predicates:
+                - Path=/envio,/envio/**
+
+            - id: ruta-entrega
+              uri: lb://ENTREGA
+              predicates:
+                - Path=/entrega,/entrega/**
+
+            - id: ruta-devoluciones
+              uri: lb://DEVOLUCIONES
+              predicates:
+                - Path=/devoluciones,/devoluciones/**
 
 eureka:
   client:
