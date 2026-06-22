@@ -31,15 +31,25 @@ spring:
               predicates:
                 - Path=/categoria,/categoria/**
 
-            - id: ruta-lista-deseos
-              uri: lb://LISTA_DESEOS
+            - id: ruta-listaDeseos
+              uri: http://localhost:8082
               predicates:
                 - Path=/wishlist,/wishlist/**
+
+            - id: ruta-listaDeseosDetalle
+              uri: http://localhost:8082
+              predicates:
+                - Path=/detalleWishlist,/detalleWishlist/**
 
             - id: ruta-carrito
               uri: lb://CARRITO
               predicates:
                 - Path=/carrito,/carrito/**
+
+            - id: ruta-carritoDetalle
+              uri: lb://CARRITO
+              predicates:
+                - Path=/detalleCarrito,/detalleCarrito/**
 
             - id: ruta-pedidos
               uri: lb://PEDIDOS
