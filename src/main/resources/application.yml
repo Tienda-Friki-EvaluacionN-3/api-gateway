@@ -32,12 +32,12 @@ spring:
                 - Path=/categoria,/categoria/**
 
             - id: ruta-listaDeseos
-              uri: http://localhost:8082
+              uri: lb://LISTADESEOS
               predicates:
                 - Path=/wishlist,/wishlist/**
 
             - id: ruta-listaDeseosDetalle
-              uri: http://localhost:8082
+              uri: lb://LISTADESEOS
               predicates:
                 - Path=/detalleWishlist,/detalleWishlist/**
 
@@ -89,7 +89,7 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
 
   instance:
-    prefer-ip-address: true
+    prefer-ip-address: false
     ip-address: 127.0.0.1
     hostname: 127.0.0.1
     instance-id: 127.0.0.1:${spring.application.name}:${server.port}

@@ -29,6 +29,7 @@ public class ApiGatewayApplication {
         System.out.println(" /devoluciones/**  -> DEVOLUCIONES");
         System.out.println("------------------------------------------------");
         System.out.println(" Eureka: http://localhost:8761");
+        System.out.println(" Swagger: http://localhost:808X/swagger-ui/index.html");
         System.out.println("================================================");
     }
 
